@@ -122,22 +122,6 @@ public class MainActivity extends AppCompatActivity implements Session.Callback,
                 }
             }
         });
-
-//        // Blocks until the all streams are configured
-//        try {
-//            mSession.syncConfigure();
-//        } catch (Exception e) {
-//
-//        }
-//        String sdp = mSession.getSessionDescription();
-//
-//        // Blocks until streaming actually starts.
-//        try {
-//            mSession.syncStart();
-//        } catch (Exception e) {
-//
-//        }
-//        mSession.syncStop();
     }
 
     @Override
@@ -397,7 +381,7 @@ public class MainActivity extends AppCompatActivity implements Session.Callback,
                 mMediaRecorder.reset();
                 Log.v(TAG, "Recording Stopped");
             }
-            mMediaProjection = null;
+//            mMediaProjection = null;
             stopScreenSharing();
         }
     }
@@ -407,7 +391,7 @@ public class MainActivity extends AppCompatActivity implements Session.Callback,
             return;
         }
         mVirtualDisplay.release();
-        //mMediaRecorder.release(); //If used: mMediaRecorder object cannot
+//        mMediaRecorder.release(); //If used: mMediaRecorder object cannot
         // be reused again
         destroyMediaProjection();
     }
